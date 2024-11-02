@@ -2,11 +2,8 @@
 export function calculateSampleSize(
   baselineConversion: number,
   mde: number,
-  confidenceLevel: number,
-  power: number = 0.8
+  _power: number = 0.8
 ): number {
-  const alpha = 1 - confidenceLevel / 100;
-  const beta = 1 - power;
   const z_alpha = 1.96; // For 95% confidence
   const z_beta = 1.28; // For 80% power
 
@@ -61,25 +58,4 @@ function normalCDF(x: number): number {
     (0.3193815 +
       t * (-0.3565638 + t * (1.781478 + t * (-1.821256 + t * 1.330274))));
   return x > 0 ? 1 - probability : probability;
-}
-
-export function calculateMDE(
-  baselineConversion: number,
-  sampleSize: number,
-  confidenceLevel: number,
-  power: number = 0.8
-): number {
-  const alpha = 1 - confidenceLevel / 100;
-  const beta = 1 - power;
-  const z_alpha = 1.96;
-  const z_beta = 1.28;
-
-  const p1 = baselineConversion / 100;
-  const mde =
-    ((z_alpha * Math.sqrt(2 * p1 * (1 - p1)) +
-      z_beta * Math.sqrt(p1 * (1 - p1))) /
-      Math.sqrt(sampleSize)) *
-    2;
-
-  return Math.round(mde * 100 * 100) / 100; // Convert to percentage with 2 decimal places
 }
