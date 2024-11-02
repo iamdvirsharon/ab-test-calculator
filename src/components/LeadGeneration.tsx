@@ -10,15 +10,15 @@ export function LeadGeneration() {
         
         <div className="grid grid-cols-3 gap-4 py-4">
           <div className="text-center">
-            <div className="text-2xl font-bold text-primary">500+</div>
+            <div className="text-2xl font-bold text-primary">350+</div>
             <div className="text-sm text-muted-foreground">Tests</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-primary">+45%</div>
+            <div className="text-2xl font-bold text-primary">+26%</div>
             <div className="text-sm text-muted-foreground">Avg. Lift</div>
           </div>
           <div className="text-center">
-            <div className="text-2xl font-bold text-primary">$50M+</div>
+            <div className="text-2xl font-bold text-primary">$5M+</div>
             <div className="text-sm text-muted-foreground">Impact</div>
           </div>
         </div>
@@ -29,7 +29,7 @@ export function LeadGeneration() {
           asChild
         >
           <a
-            href="https://zcal.co/dvirsharon/30min"
+            href="https://zcal.co/dvirsharon/30min?ref=ab-test"
             target="_blank"
             rel="noopener noreferrer"
           >
